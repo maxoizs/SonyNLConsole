@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>  
+  <?define var.Manufacturer = Sony?>
+  <?define var.Version=1.0.6436.19977?>
+  <?define var.ProductName = Neural Network Console?>  
+  <?define var.ProductFullName = $(var.Manufacturer) $(var.ProductName)?>  
+  <?define var.ProgramDir = sys/exec64?>  
+</Include>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!--Registry entries-->
+  <DirectoryRef Id="TARGETDIR">
+    <Component Id="RegistryEntries">
+      <RegistryKey Root="HKLM" Key="Software\$(var.Manufacturer)\$(var.ProductName)" ForceDeleteOnUninstall="yes">
+        <RegistryValue Name="Product Name" Type="string" Value="$(var.ProductFullName)"/>        
+      </RegistryKey>      
+    </Component>
+  </DirectoryRef>
+</Include>

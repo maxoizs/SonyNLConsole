@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Defines.wxi?>
+  <Product
+    Id="*"
+    Name="$(var.ProductFullName)"
+    Language="1033"
+    Version="$(var.Version)"   
+    Manufacturer="$(var.Manufacturer)"
+    UpgradeCode="{4D4C0A1E-936E-4A0E-8CFB-8A825A9B04D7}">
+
+    <Package InstallerVersion="450" Compressed="yes" InstallScope="perMachine"/>
+    <MediaTemplate EmbedCab="yes"/>
+    
+    <?include CoreRequisites.wxi?>
+    <UIRef Id="WixUI_Minimal"/>
+
+    <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
+      <ComponentRef Id="RegistryEntries"/>     
+      <ComponentGroupRef Id="SourceComponentGroup"/>      
+    </Feature>
+    <Feature Id="DesktopShortcutFeature" Title="Create Desktop Shortcut" Level="1">            
+      <ComponentRef Id='DesktopShortCut'/> 
+    </Feature>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFiles64Folder" Name="Program Files">
+        <Directory Id="CompanyDir" Name="$(var.Manufacturer)">
+          <Directory Id="INSTALLDIR" Name="$(var.ProductName) $(var.Version)"/>
+        </Directory>       
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop"/>
+    </Directory>
+    <DirectoryRef Id="TARGETDIR"/>
+    <?include Registries.wxi?>
+    <?include Shortcuts.wxi?>
+  </Product>
+</Wix>
