@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <DirectoryRef Id="DesktopFolder">
+    <Component Id="DesktopShortCut" Guid="*">
+      <!--<Condition>ADSK_DESKTOPSHORTCUT_1 = 1</Condition>-->
+      <RegistryValue Id="DesktopShortcutRegistry"
+      Root="HKCU"
+      Key="Software\$(var.Manufacturer)\$(var.ProductName)\shortcut"
+      Name="DesktopShortCut" Value="1" Type="integer" KeyPath="yes"/>
+      <Shortcut Id="DesktopShortCutIcon"
+      Description="$(var.ProductFullName)"
+      Name="$(var.ProductFullName)"
+      Target="[INSTALLDIR]\neural_network_console.exe"
+      Show="normal"
+      WorkingDirectory="INSTALLDIR"/>
+      <RemoveFolder Id="DesktopFolder" On="uninstall"/>
+    </Component>
+  </DirectoryRef>
+</Include>

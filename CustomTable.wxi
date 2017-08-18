@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+	<!-- TODO: Put your code here. -->
+  <CustomTable Id="AdskExecuteSequence">
+    <Column Id="Action" Type="string" Width="72" PrimaryKey="yes" />
+    <Column Id="Condition" Nullable="yes" Type="string" Width="255" />
+    <Column Id="Sequence" Nullable="yes" Type="int" Width="2" />
+    <Row>
+      <Data Column="Action">AppSearch</Data>
+      <Data Column="Condition" />
+      <Data Column="Sequence">40</Data>
+    </Row>
+    <Row>
+      <Data Column="Action">CostInitialize</Data>
+      <Data Column="Condition" />
+      <Data Column="Sequence">800</Data>
+    </Row>
+    <Row>
+      <Data Column="Action">FileCost</Data>
+      <Data Column="Condition" />
+      <Data Column="Sequence">900</Data>
+    </Row>
+    <Row>
+      <Data Column="Action">CostFinalize</Data>
+      <Data Column="Condition" />
+      <Data Column="Sequence">1000</Data>
+    </Row>
+    <Row>
+      <Data Column="Action">InstallValidate</Data>
+      <Data Column="Condition" />
+      <Data Column="Sequence">1400</Data>
+    </Row>
+		<Row>
+			<Data Column="Action">DIRCA_SET_ROOTDRIVE</Data>
+			<Data Column="Condition" />
+			<Data Column="Sequence">796</Data>
+		</Row>
+	</CustomTable>
+</Include>

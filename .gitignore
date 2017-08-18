@@ -1,0 +1,6 @@
+*.orig
+*.log
+ThirdParty/
+obj/
+bin/
+SNLC/

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- Required by install framework -->
+  <?include CustomTable.wxi?>
+  <Property Id="ARPPRODUCTICON" Value="AutodeskLogo"/>
+</Include>  
